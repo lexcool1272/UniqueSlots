@@ -1,5 +1,5 @@
-const symbols = ["🍎", "🍌", "🍒", "🍇", "🔔", "7️⃣"];
-const jackpots = ["7️⃣"];
+const symbols = ["🍺", "🍷", "$", "💵", "💰", "🍻"]; // Beer, wine, and money-themed symbols
+const jackpots = ["🍻"]; // Define a jackpot symbol if needed
 let balance = 100;
 
 document.getElementById('spin-button').addEventListener('click', spinReels);
@@ -52,11 +52,11 @@ function stopSpinning(reels, symbols) {
 function checkWin(reel1, reel2, reel3, betAmount) {
     if (reel1 === reel2 && reel2 === reel3) {
         if (jackpots.includes(reel1)) {
-            const winAmount = betAmount * 10;
+            const winAmount = betAmount * 10; // Jackpot win
             balance += winAmount;
             displayMessage("Jackpot! You won $" + winAmount + "!");
         } else {
-            const winAmount = betAmount * 5;
+            const winAmount = betAmount * 5; // Regular win
             balance += winAmount;
             displayMessage("You won $" + winAmount + "!");
         }
