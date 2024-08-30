@@ -1,6 +1,6 @@
 const symbols = ["🍺", "🍷", "$", "💵", "💰", "🍻"]; // Beer, wine, and money-themed symbols
 const jackpots = ["🍻"]; // Define a jackpot symbol if needed
-let balance = 100;
+let balance = 450;
 
 document.getElementById('spin-button').addEventListener('click', spinReels);
 
